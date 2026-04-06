@@ -1,4 +1,4 @@
-
+# 🍽️ NepalBite
 NepalBite is a modern cloud-based restaurant management system designed to digitize and streamline restaurant operations. It provides an all-in-one platform for managing orders, billing, delivery, inventory, and customer relationships.
 
 ---
@@ -29,3 +29,41 @@ NepalBite is a modern cloud-based restaurant management system designed to digit
 ---
 
 ## 📂 Project Structure
+NepalBite/
+│── frontend/
+│── backend/
+│── components/
+│── services/
+│── firebase/
+│── utils/
+│── public/
+│── package.json
+
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/your-username/nepalbite.git
+cd nepalbite
+npm install
+npm start
+
+🎯 Vision
+
+To empower restaurants through digital transformation and smart automation.
+
+💡 Mission
+
+To simplify restaurant operations and enhance customer experiences using innovative technology.
+
+📞 Contact
+
+Email: yadavbri108@gmail.com
+
+
+---
+
+
+
