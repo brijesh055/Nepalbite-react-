@@ -1,6 +1,3 @@
-# Nepalbite-react-
-NepalBite is a cloud-based restaurant management platform offering POS, online ordering, delivery tracking, inventory management, CRM, and analytics. Designed to streamline operations, enhance customer experience, and help restaurants scale with AI-powered insights and real-time data.
-# 🍽️ NepalBite
 
 NepalBite is a modern cloud-based restaurant management system designed to digitize and streamline restaurant operations. It provides an all-in-one platform for managing orders, billing, delivery, inventory, and customer relationships.
 
