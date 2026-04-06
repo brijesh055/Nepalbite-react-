@@ -1,0 +1,56 @@
+/* src/components/AuthModal.css */
+.auth-overlay {
+  position: fixed; inset: 0; z-index: 800;
+  background: rgba(0,0,0,.93);
+  display: flex; align-items: center; justify-content: center; padding: 1rem;
+}
+.auth-box {
+  background: var(--s2);
+  border: 1px solid rgba(201,151,58,.2);
+  border-radius: var(--r8);
+  padding: 2rem; width: 100%; max-width: 380px; position: relative;
+  max-height: 92svh; overflow-y: auto;
+}
+.auth-close {
+  position: absolute; top: .85rem; right: .85rem;
+  background: none; border: none; color: var(--wm); font-size: 1.3rem; cursor: pointer;
+}
+.auth-logo {
+  font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 900; margin-bottom: .2rem;
+}
+.auth-logo span { color: var(--g); }
+.auth-sub { font-size: .74rem; color: var(--wm); margin-bottom: 1.5rem; }
+
+.auth-tabs { display: flex; gap: .4rem; margin-bottom: 1.35rem; }
+.auth-tab {
+  flex: 1; padding: .44rem; background: var(--s3);
+  border: 1px solid rgba(245,240,232,.08); border-radius: var(--r4);
+  color: var(--wm); font-size: .72rem; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all .2s;
+}
+.auth-tab.on { background: var(--gd); border-color: var(--g); color: var(--g); }
+
+.form-label {
+  font-size: .6rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--wm); display: block; margin-bottom: .3rem;
+}
+.auth-err { font-size: .72rem; color: var(--rd); margin-top: .4rem; }
+.auth-ok  { font-size: .72rem; color: var(--grn); margin-top: .4rem; }
+.forgot-link {
+  font-size: .7rem; color: var(--g); cursor: pointer;
+  background: none; border: none; text-align: right;
+  display: block; margin-top: .38rem; width: 100%; font-family: 'DM Sans', sans-serif;
+}
+.forgot-link:hover { text-decoration: underline; }
+.forgot-desc { font-size: .78rem; color: var(--wm); line-height: 1.6; margin-bottom: .85rem; }
+.auth-btn {
+  width: 100%; padding: .82rem; background: var(--g); color: var(--bk);
+  border: none; border-radius: var(--r4); font-weight: 700;
+  font-size: .86rem; cursor: pointer; margin-top: 1rem;
+  letter-spacing: .04em; transition: all .2s; font-family: 'DM Sans', sans-serif;
+}
+.auth-btn:hover { background: var(--gl); }
+.auth-btn:disabled { background: rgba(201,151,58,.35); cursor: not-allowed; }
+.auth-switch { font-size: .72rem; color: var(--wm); text-align: center; margin-top: .85rem; }
+.auth-switch span { color: var(--g); cursor: pointer; font-weight: 500; }
+.auth-switch span:hover { text-decoration: underline; }

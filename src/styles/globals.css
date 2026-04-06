@@ -1,0 +1,135 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap');
+
+:root {
+  --g:   #C9973A;
+  --gl:  #E8B94F;
+  --gd:  rgba(201,151,58,.14);
+  --bk:  #0A0A08;
+  --s1:  #111110;
+  --s2:  #1A1A18;
+  --s3:  #242422;
+  --w:   #F5F0E8;
+  --wm:  rgba(245,240,232,.65);
+  --wd:  rgba(245,240,232,.25);
+  --grn: #4ade80;
+  --rd:  #f87171;
+  --bl:  #60a5fa;
+  --yw:  #fbbf24;
+  --r4:  4px;
+  --r8:  8px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bk);
+  color: var(--w);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* Custom cursor — PC/laptop only */
+.custom-cursor {
+  position: fixed; top: 0; left: 0;
+  width: 10px; height: 10px;
+  background: var(--g); border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .15s, height .15s, opacity .2s;
+  display: none;
+}
+.custom-cursor-ring {
+  position: fixed; top: 0; left: 0;
+  width: 30px; height: 30px;
+  border: 1px solid rgba(201,151,58,.4); border-radius: 50%;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: opacity .2s;
+  display: none;
+}
+body.has-mouse { cursor: none; }
+body.has-mouse .custom-cursor,
+body.has-mouse .custom-cursor-ring { display: block; }
+@media (pointer: coarse) {
+  body, body.has-mouse { cursor: auto !important; }
+  .custom-cursor, .custom-cursor-ring { display: none !important; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--s2); }
+::-webkit-scrollbar-thumb { background: var(--g); border-radius: 2px; }
+
+/* Common */
+.btn-gold {
+  background: var(--g); color: var(--bk);
+  border: none; border-radius: var(--r4);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600; font-size: .82rem;
+  padding: .5rem 1.2rem; cursor: pointer;
+  transition: background .2s; letter-spacing: .04em;
+}
+.btn-gold:hover { background: var(--gl); }
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--wd);
+  color: var(--w);
+  border-radius: var(--r4);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500; font-size: .74rem;
+  padding: .42rem 1rem; cursor: pointer;
+  transition: all .2s;
+}
+.btn-outline:hover { border-color: var(--g); color: var(--g); }
+.btn-outline:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 1.5rem; left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--s2); border: 1px solid rgba(201,151,58,.3);
+  padding: .65rem 1.2rem; border-radius: var(--r4);
+  font-size: .78rem; color: var(--w);
+  opacity: 0; transition: all .3s;
+  z-index: 9000; pointer-events: none;
+  white-space: nowrap; max-width: 90vw; text-align: center;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Pill badges */
+.badge { font-size: .52rem; padding: .13rem .46rem; border-radius: 3px; }
+.badge-veg   { background: rgba(74,222,128,.12); color: #4ade80; }
+.badge-spicy { background: rgba(249,115,22,.12);  color: #f97316; }
+.badge-sweet { background: rgba(236,72,153,.12);  color: #ec4899; }
+.badge-pop   { background: var(--gd);             color: var(--g); }
+
+/* Input */
+.form-input {
+  width: 100%;
+  background: var(--s3);
+  border: 1px solid rgba(245,240,232,.1);
+  color: var(--w);
+  padding: .68rem .9rem;
+  border-radius: var(--r4);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .84rem;
+  transition: border-color .2s;
+}
+.form-input:focus { outline: none; border-color: var(--g); }
+.form-input::placeholder { color: var(--wd); }
+
+/* Overlay */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 499;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
